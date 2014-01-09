@@ -17,7 +17,7 @@ development:
   encoding: unicode
   database: tunr_development
   pool: 5
-  username: tunr
+  username: Brad
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -43,13 +43,8 @@ test:
   encoding: unicode
   database: tunr_test
   pool: 5
-  username: tunr
+  username: Brad
   password:
 
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: tunr_production
-  pool: 5
-  username: tunr
-  password:
+
+
