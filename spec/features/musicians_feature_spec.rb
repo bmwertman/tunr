@@ -5,11 +5,11 @@ describe MusiciansController do
   before do
     @name = "Diana Ross"
   end
-  describe "Starting on the new musician page" do
+  describe "the new musician page" do
     before do
      visit new_musician_path
     end
-    it "creates a musician from a form" do
+    it "creates a new musician from the form" do
       fill_in :name, with: @name
       click_button "submit"
       current_path.should == musicians_path
