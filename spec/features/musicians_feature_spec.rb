@@ -41,5 +41,20 @@ describe MusiciansController do
       end
     end
   end
+  describe "when we visit the index page" do
+    before do
+      visit musicians_path
+    end
+    describe "when we clisk the delete button" do
+      before do
+        within "h2.musician_#{@musician.id}" do
+          click_button "DELETE"
+        end
+    end
+    it "should leave us on the index page" do
+      current_path.should == musicians_path
+    end
+    end
+  end
 end
 end
