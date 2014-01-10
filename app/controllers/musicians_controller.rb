@@ -1,5 +1,7 @@
 class MusiciansController < ApplicationController
-  def new; end
+  def new
+    @musicians = Musician.all
+  end
 
   def create
     name = params[:name]
