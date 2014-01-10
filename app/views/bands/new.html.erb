@@ -1,4 +1,10 @@
-<form action="/bands" method="post">
+<!-- <form action="/bands" method="post">
 	<input type="text" name="name" placeholder="Band Name">
 	<button id="submit">Submit</button>
-</form>
+</form> -->
+
+<%= form_for @band do |f| %>
+<%= f.label :name, "Name:" %>
+<%= f.text_field :name, placeholder: "Name", class:"form-control" %>
+<%= f.submit nil, class:"btn btn-primary", id:"submit" %>
+<% end %>

@@ -12,4 +12,19 @@ class MusiciansController < ApplicationController
   def index
     @musicians = Musician.all
   end
+
+  def edit
+    @musician = Musician.find(params[:id])
+  end
+
+  def update
+    musician = Musician.find(params[:id])
+    musician.name = params[:musician][:name]
+    musician.save
+    redirect_to musician_path(musician)
+  end
+
+  def show
+    @musician = Musician.find(params[:id])
+  end
 end
