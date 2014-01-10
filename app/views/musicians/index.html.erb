@@ -1,3 +1,10 @@
 <% @musicians.each do |musician| %>
-<h2 class="musician_<%=musician.id %>"><%= musician.name %><button class="delete btn-link">DELETE</button></h2>
+<table>
+<tr class="musician_<%=musician.id %>"><%= musician.name %>
+<form action="<%=musician_path(musician)%>" method="post">
+	<input type="hidden" value="delete" name="_method">
+	<button class="delete btn-link">DELETE</button>
+</form>
+</tr>
+</table>
 <% end %>

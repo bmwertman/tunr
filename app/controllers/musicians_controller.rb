@@ -27,4 +27,10 @@ class MusiciansController < ApplicationController
   def show
     @musician = Musician.find(params[:id])
   end
+
+  def destroy
+    Musician.find(params[:id]).destroy
+    redirect_to musicians_path
+  end
+
 end
